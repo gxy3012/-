@@ -1,0 +1,25 @@
+线性表学习笔记二：链表
+
+一。声明、初始化
+
+声明：
+typedef struct Link{
+    char elem;
+    struct Link *next;
+}link;
+初始化：
+创建头结点/首元结点；
+
+link * initlink（）{
+    link* p=（link*）malloc（sizeof（link））；
+    link *t=p；
+    t->next=null;
+    for(int i=1;i<size;i++）{
+        link * a=（link*）malloc(sizeof(link));
+        a->elem=i;
+        a->next=null;
+        t->next=a;
+        t=t->next;
+    }
+    return p;
+}
