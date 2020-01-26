@@ -1,0 +1,40 @@
+线性表学习笔记四：链栈
+
+声明：
+
+typedef struct LineStack{
+    int data;
+    struct LineStack* next;
+}linestack;
+
+
+入栈：
+
+linestack* push(linestack * stack,int a){
+    linestack *temp=(linestack)malloc(sizeof(linestack));
+    temp->data=a;
+    temp->next=stack;
+    stack=temp;
+    return stack;
+}
+
+出栈：
+
+linestack * pop（linestack* stack）{
+    if（stack==null）{
+    printf（“空栈！”）；
+    }
+    printf("栈顶元素是：%d\n",stack->elem);
+    stack=stack->next;
+}
+
+
+主函数：
+
+int main（）{
+    linestack *stack=null；
+    stack=push（stack，1）；
+    stack=push（stack，2）；
+    stack=push（stack，3）；
+    stack=push（stack，4）；
+}
