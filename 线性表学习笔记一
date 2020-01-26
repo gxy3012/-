@@ -1,0 +1,20 @@
+线性表学习笔记
+
+一、顺序表
+
+声明：
+typedef struct table{
+    int *head;
+    int length;
+    int size;
+}table;
+
+初始化：
+#define Size 5;
+table initable(){
+    table t;
+    t.head=(int*)malloc(size*sizeof(int));
+    t.length=0;
+    t.size=Size;
+    return t;
+}
